@@ -1,5 +1,3 @@
 [submodule "env"]
 	path = rvpvp/env
-	url = ../riscv-test-env.git
-[submodule "rvpvp/env"]
 	url = git@github.com:wangchaoqun789/verification-test-env.git
