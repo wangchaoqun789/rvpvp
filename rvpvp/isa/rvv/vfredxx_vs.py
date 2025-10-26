@@ -97,7 +97,7 @@ class Vfredmax_vs(Inst):
                 vs = np.ma.concatenate([vs1, vs2])
                 vs_nan = np.ma.where( np.isnan(vs), 1, 0 )
                 if vs_nan.any() == True and not vs_nan.all() == True:
-                    vs = np.ma.where( vs_nan==1, np.NINF, vs )
+                    vs = np.ma.where( vs_nan==1, -np.inf, vs )
                 
                 result[0] = vs.max()
             
@@ -146,7 +146,7 @@ class Vfredmin_vs(Inst):
                 vs = np.ma.concatenate([vs1, vs2])
                 vs_nan = np.ma.where( np.isnan(vs), 1, 0 )
                 if vs_nan.any() == True and not vs_nan.all() == True:
-                    vs = np.ma.where( vs_nan==1, np.PINF, vs )
+                    vs = np.ma.where( vs_nan==1, np.inf, vs )
                 
                 result[0] = vs.min()
             

@@ -119,10 +119,10 @@ def f16_rsqrt7( vs2 ):
             vd[no] = np.nan
             continue
         elif res_class == 0x8:
-            vd[no] = np.NINF
+            vd[no] = -np.inf
             continue 
         elif res_class == 0x10:
-            vd[no] = np.PINF
+            vd[no] = np.inf
             continue
         elif res_class == 0x80:
             vd[no] = 0
@@ -147,10 +147,10 @@ def f32_rsqrt7( vs2 ):
             vd[no] = np.nan
             continue
         elif res_class == 0x8:
-            vd[no] = np.NINF
+            vd[no] = -np.inf
             continue 
         elif res_class == 0x10:
-            vd[no] = np.PINF
+            vd[no] = np.inf
             continue
         elif res_class == 0x80:
             vd[no] = 0
@@ -175,10 +175,10 @@ def f64_rsqrt7( vs2 ):
             vd[no] = np.nan
             continue
         elif res_class == 0x8:
-            vd[no] = np.NINF
+            vd[no] = -np.inf
             continue 
         elif res_class == 0x10:
-            vd[no] = np.PINF
+            vd[no] = np.inf
             continue
         elif res_class == 0x80:
             vd[no] = 0

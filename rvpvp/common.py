@@ -1,5 +1,6 @@
 import os
 import collections
+import collections.abc
 import yaml
 import inspect
 from importlib.machinery import SourceFileLoader
@@ -58,7 +59,7 @@ def parse_config_items(cfg, ctx = {}):
 def merge_configs(cfg, part):
     for k, v in part.items():
         if (k in cfg and isinstance(cfg[k], dict)
-                and isinstance(part[k], collections.Mapping)):
+                and isinstance(part[k], collections.abc.Mapping)):
             merge_configs(cfg[k], part[k])
         else:
             cfg[k] = part[k]

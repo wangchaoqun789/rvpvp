@@ -8,7 +8,7 @@ FE_UPWARD = 0x0800
 FE_TOWARDZERO = 0x0c00
 libm = ctypes.CDLL('libm.so.6')
 round_dict = { 0:FE_TONEAREST , 1:FE_TOWARDZERO , 2:FE_DOWNWARD , 3:FE_UPWARD  }
-INF_dict = {0: np.PINF, 1: np.NINF}
+INF_dict = {0: np.inf, 1: -np.inf}
 
 def muladd( a, b, c, l ):
 
